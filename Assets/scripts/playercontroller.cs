@@ -7,9 +7,8 @@ public class playercontroller : MonoBehaviour
     public Rigidbody2D rb;
     public Animator anim;
     // Start is called before the first frame update
-    void Start()
-    {
-        
+    void Start() {
+ public int jumpfForce;       
     }
 
     // Update is called once per frame
@@ -22,8 +21,7 @@ public class playercontroller : MonoBehaviour
         {
 
         anim.SetTrigger("Jump");
-        }     rb.AddForce(Vector2.up);
-    }
+        }     rb.AddForce(Vector2.up * jumpForce);    
 }
 
 
