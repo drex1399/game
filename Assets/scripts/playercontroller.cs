@@ -16,4 +16,16 @@ public class playercontroller : MonoBehaviour
     public bool grounded;
 
     void Start()
+    { }
 
+    private void FixedUpdate()
+    { }
+    grounded = Physics2D.OverlapPoint(groundPoint.position, groundLayer);
+        {}
+        void Update()
+    { }
+
+
+
+    
+       
