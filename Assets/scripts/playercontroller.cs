@@ -2,28 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class playercontroller : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Animator anim;
-    // Start is called before the first frame update
-    void Start() {
- public int jumpfForce;       
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-      
+    public Transform groundpoint;
 
+    public LayerMask groundlayer;
 
-       if(Input.GetKeyDown(KeyCode.Space))
-        {
+    public bool grounded;
 
-        anim.SetTrigger("Jump");
-        }     rb.AddForce(Vector2.up * jumpForce);    
-}
-
-
-
+    void Start()
 
