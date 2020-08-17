@@ -1,31 +1,36 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-public class playercontroller : MonoBehaviour
+public class BackgroundController : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public Animator anim;
+    public Transform startPos;
+    public Transform endPos;
 
-    public Transform groundpoint;
+    public int moveVel = 5;
 
-    public LayerMask groundlayer;
-
-    public bool grounded;
-
+    // Start is called before the first frame update
     void Start()
-    { }
+    {
 
-    private void FixedUpdate()
-    { }
-    grounded = Physics2D.OverlapPoint(groundPoint.position, groundLayer);
-        {}
-        void Update()
-    { }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (transform.position.x != endPos.position.x)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, endPos.position, Time.deltaTime * moveVel);
+        }
+        else
+        {
+            transform.position = startPos.position;
+        }
+    }
+}
 
 
 
-    
-       
+
+
